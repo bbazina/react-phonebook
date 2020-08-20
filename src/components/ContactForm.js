@@ -24,6 +24,26 @@ const ContactForm = (props) => {
     props.addOrEdit(values);
   };
 
+  /*
+  function render() {
+    const data = [{ name: "test1" }, { name: "test2" }, { name: "test3" }];
+    return (
+      <div>
+        {data.map(function (d, idx) {
+          return (
+            <input
+              className="form-control"
+              placeholder="Phone Number"
+              name="phoneNumber"
+              value={d.name}
+              onChange={handleInputChange}
+            />
+          );
+        })}
+      </div>
+    );
+  } */
+
   return (
     <form autoComplete="off" onSubmit={handleFormSubmit}>
       <div className="form-group input-group">
@@ -86,7 +106,7 @@ const ContactForm = (props) => {
         <div className="form-group input-group">
           <div className="input-group-prepend">
             <div className="input-group-text">
-              <i className="fas fa-hashtag"></i>
+              <i className="fas fa-user"></i>
             </div>
           </div>
           <input
