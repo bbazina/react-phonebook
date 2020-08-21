@@ -10,6 +10,7 @@ const ContactForm = (props) => {
   };
 
   var [values, setValues] = useState(initialFieldValues);
+  const [inputList, setInputList] = useState({});
 
   const handleInputChange = (e) => {
     var { name, value } = e.target;
@@ -43,7 +44,6 @@ const ContactForm = (props) => {
       </div>
     );
   } */
-
   return (
     <form autoComplete="off" onSubmit={handleFormSubmit}>
       <div className="form-group input-group">
@@ -88,6 +88,9 @@ const ContactForm = (props) => {
             value={values.phoneNumber}
             onChange={handleInputChange}
           />
+          <a className="btn text-primary">
+            <i className="fas fa-plus"></i>
+          </a>
         </div>
         <div className="form-group input-group">
           <div className="input-group-prepend">
@@ -102,11 +105,14 @@ const ContactForm = (props) => {
             value={values.email}
             onChange={handleInputChange}
           />
+          <a className="btn text-primary">
+            <i className="fas fa-plus"></i>
+          </a>
         </div>
         <div className="form-group input-group">
           <div className="input-group-prepend">
             <div className="input-group-text">
-              <i className="fas fa-user"></i>
+              <i className="fas fa-users"></i>
             </div>
           </div>
           <input
@@ -116,6 +122,9 @@ const ContactForm = (props) => {
             value={values.tags}
             onChange={handleInputChange}
           />
+          <a className="btn text-primary">
+            <i className="fas fa-plus"></i>
+          </a>
         </div>
       </div>
       <div className="form-control">
